@@ -1,13 +1,14 @@
 // src/App.js
 import React from "react";
 import "./App.css";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 
 export default function App() {
   return (
     <>
-      <SkipLink />
-      <Navbar />
-      <main id="main">
+        <Navbar />
+        <main id="main">
         <Hero />
         <CategoryGrid />
         <Services />
@@ -54,65 +55,6 @@ const REVIEWS = [
 ];
 
 /* ----- Komponenten ----- */
-
-function SkipLink() {
-  return (
-    <a className="skiplink" href="#main">
-      Direkt zum Inhalt springen
-    </a>
-  );
-}
-
-function Navbar() {
-  return (
-    <header className="navbar">
-      <div className="container nav-inner">
-        <a href="#hero" className="brand" aria-label="Velomanufaktur Home">
-          <Logo /> <span>Velomanufaktur Bern</span>
-        </a>
-        <nav aria-label="Hauptnavigation">
-          <ul className="nav-links">
-            <li><a href="#kategorien">Bikes</a></li>
-            <li><a href="#services">Werkstatt</a></li>
-            <li><a href="#highlights">Highlights</a></li>
-            <li><a href="#fitting">Bike-Fitting</a></li>
-            <li><a href="#kontakt" className="btn btn--small">Termin</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-  );
-}
-
-function Hero() {
-  return (
-    <section id="hero" className="hero">
-      <div className="container hero-inner">
-        <div className="hero-copy">
-          <h1>Dein Bike. Dein Flow. <span className="accent">In 24 h fahrbereit.</span></h1>
-          <p>
-            Premium-Bikes, Same-Day-Service und individuelle Beratung in Bern.
-            Kostenlose Erstberatung – Probefahrt jederzeit.
-          </p>
-          <div className="hero-cta">
-            <a href="#kontakt" className="btn">Probefahrt buchen</a>
-            <a href="tel:+41310000000" className="btn btn--ghost" aria-label="Jetzt anrufen">
-              Jetzt anrufen
-            </a>
-          </div>
-          <ul className="hero-badges" aria-label="Vorteile">
-            <li>✔ Same-Day-Werkstatt</li>
-            <li>✔ 6 Monate Garantie</li>
-            <li>✔ Finanzierung möglich</li>
-          </ul>
-        </div>
-        <div className="hero-media" aria-hidden="true">
-          <div className="hero-placeholder">Bike-Hero-Bild</div>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function CategoryGrid() {
   return (
